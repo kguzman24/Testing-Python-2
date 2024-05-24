@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM mcr.microsoft.com/vscode/devcontainers/python:3
 
 # Avoid warnings by switching to noninteractive
 ENV DEBIAN_FRONTEND=noninteractive
@@ -16,7 +16,7 @@ ENV DEBIAN_FRONTEND=dialog
 # Set up a working folder and install the Python dependencies
 WORKDIR \/workspace
 COPY requirements.txt .\/
-RUN pip install -r requirements.txt
+RUN code --install-extension ms-python.python
 
 # Clean up
 RUN apt-get clean && rm -rf \/var\/cache\/apt\/archives\/* \/var\/lib\/apt\/lists\/*

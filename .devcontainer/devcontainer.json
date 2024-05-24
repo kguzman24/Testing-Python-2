@@ -4,6 +4,7 @@
         "dockerfile": "Dockerfile",
     },
     "settings": {
+        "python.pythonPath": "/usr/local/bin/python",
       "terminal.integrated.shell.linux": "\/bin\/bash",
     },
     "extensions": [
